@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Booking History</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color: #e2e2e2">
+
+  <ion-list>
+    <ion-item *ngFor="let booking of bookings">
+      <ion-card (tap)="gotoDetails(booking)">
+        <ion-card-content>
+          <p>{{booking.shopName}}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

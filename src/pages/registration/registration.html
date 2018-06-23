@@ -1,0 +1,52 @@
+<ion-content class="login-content">
+    <ion-grid style="height: 100%">
+      <ion-row justify-content-center align-items-center style="height: 100%">
+  
+  
+  
+        <ion-card class="loginCard">
+          <ion-card-content>
+            <h2 class="welcome">Let's Register</h2>
+            <p class="subHeader">- ShopWise -</p>
+  
+            <ion-grid>
+              <ion-row>              
+                  <ion-col>
+                    <ion-input class="inputClass" type="text" placeholder="Email" [(ngModel)]="user.email"></ion-input>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                    <ion-input class="inputClass" type="password" placeholder="Password" [(ngModel)]="user.password"></ion-input>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <ion-input class="inputClass" type="password" placeholder="Confirm password" [(ngModel)]="conPassword"></ion-input>
+                  </ion-col>
+                </ion-row>
+              <ion-row>
+                <ion-col>
+                  <button ion-button round block style="height:45px;" color="primary" (tap)="register(user)">Register</button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            
+  
+            
+  
+            <ion-grid style="padding:0px; width:100%">
+              <ion-row justify-content-center align-items-center>               
+                <ion-col>
+                  <button ion-button round clear block style="color:white" (tap)="gotoSignIn()">Do you have an account?  Sign in</button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+  
+  
+  
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
+    </ion-grid>
+  </ion-content>

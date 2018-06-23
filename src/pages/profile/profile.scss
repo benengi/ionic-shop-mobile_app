@@ -1,0 +1,43 @@
+page-profile {
+
+    .profile-picture{
+        background-color: aliceblue;
+        height: 26vw; 
+        width: 31vw; 
+        border: 5px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 5px gray;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .profile-content {    
+        background-image: url('../assets/imgs/background_login.jpg'); 
+        background-repeat: no-repeat; 
+        background-size: cover;
+        }  
+
+    .inputClass{
+        border: 1px solid white;
+        border-radius: 30px !important;
+        text-align: center;
+        color: white;
+        font-size: 1em;        
+        margin: 5px;    
+    }
+
+    .text-input::-moz-placeholder {
+        color: white;
+        text-align: center;
+      }  
+      .text-input:-ms-input-placeholder {
+        color: white;
+        text-align: center;        
+      }  
+      .text-input::-webkit-input-placeholder {
+        text-indent: 0;
+        text-align: center;
+        color: white;
+      }
+}

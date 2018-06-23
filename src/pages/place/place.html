@@ -1,0 +1,62 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{shop.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color: #F5F5F5">
+
+  <ion-grid>
+    <ion-row style="max-height: 20rem;">
+      <img src="{{shop.info.shopImage1}}">      
+    </ion-row>
+
+    <ion-row>
+      <ion-card>
+        <ion-card-header>{{shop.name}}</ion-card-header>
+        <ion-card-content>
+          <h3>Rating : {{shop.info.rating}}.0</h3>
+          <p>{{shop.info.shopDescription}}</p>
+
+          <h3>Address : {{shop.info.address.street}} , {{shop.info.address.zipCode}}</h3>
+         
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+
+    <ion-row>
+      <ion-card>
+        <ion-card-content>
+          <ion-list>
+            <ion-item *ngFor="let com of comments">
+              <p><strong>{{com.name | uppercase}}</strong></p>
+              <p>{{com.comment}}</p>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+
+    <ion-row>
+      <ion-card>
+        <ion-card-header>
+          Comment
+        </ion-card-header>
+        <ion-card-content>
+          <ion-textarea placeholder="Comment here.." 
+            autocorrect="on" [(ngModel)]="commentText"></ion-textarea>
+        <button ion-button block outline color="secondary" (tap)="saveComment()">Submit</button>
+            
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+
+    
+  </ion-grid>
+
+  <button ion-button block outline color="danger" (tap)="gotoReservation(shop)">Book now</button>
+
+</ion-content>

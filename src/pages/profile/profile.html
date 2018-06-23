@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Profile</ion-title>
+    <ion-buttons end>
+        <button ion-button (click)="logout()">
+          <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="profile-content">
+
+  <ion-grid style="height: 100%">
+    <ion-row justify-content-center align-items-center style="height: 100%">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col></ion-col>
+          <ion-col>
+            <img src="{{user.photo}}" alt="Profile picture" center class="profile-picture">
+          </ion-col>
+          <ion-col></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input class="inputClass" type="text" placeholder="Email" [(ngModel)]="user.email"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input class="inputClass" type="text" placeholder="Full name" [(ngModel)]="user.fullname"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input class="inputClass" type="phone" placeholder="Phone" [(ngModel)]="user.phone"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <button ion-button round block style="height:45px;" color="secondary" (tap)="updateUserProfile()">Update</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

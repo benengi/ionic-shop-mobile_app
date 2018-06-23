@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+        <button ion-button block (tap)="gotousersettings()" outline>User settings</button>
+        <button ion-button block (tap)="gotobookingHistory()" outline>My booking history</button>
+    </ion-row>
+    <ion-row  justify-content-center align-items-center>
+      <button class="logoutbtn" ion-button block (tap)="logout()" color="danger">Logout</button>
+    </ion-row>
+  </ion-grid>
+ 
+
+
+</ion-content>

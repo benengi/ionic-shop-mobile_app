@@ -1,0 +1,55 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Make payment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+
+      <ion-row>
+          <ion-item>
+            <ion-label fixed>Total Amount</ion-label>
+            <ion-input type="number" [(ngModel)]="payment.paymentAmount"></ion-input>
+          </ion-item>
+        </ion-row>
+
+    <ion-row>
+      <ion-item>
+        <ion-label fixed>Card holder name</ion-label>
+        <ion-input type="text" [(ngModel)]="payment.cardName"></ion-input>
+      </ion-item>
+    </ion-row>
+
+    <ion-row>
+      <ion-item>
+        <ion-label fixed>Card number</ion-label>
+        <ion-input type="text" [(ngModel)]="payment.cardNumber"></ion-input>
+      </ion-item>
+    </ion-row>
+
+    <ion-row>
+      <ion-item>
+        <ion-label fixed>Expire date</ion-label>
+        <ion-datetime displayFormat="MM/YYYY" [(ngModel)]="payment.expireDate"></ion-datetime>
+      </ion-item>
+    </ion-row>
+
+    <ion-row>
+      <ion-item>
+        <ion-label fixed>CVV</ion-label>
+        <ion-input type="number" [(ngModel)]="payment.cvv"></ion-input>
+      </ion-item>
+    </ion-row>
+
+    <ion-row>
+        <button ion-button color="danger" (tap)="payNow()" block outline>Pay now</button>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

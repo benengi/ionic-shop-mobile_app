@@ -1,0 +1,50 @@
+page-login {
+    .login-content {    
+    background-image: url('../assets/imgs/background_login.jpg'); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    }    
+.welcome{
+    font-size: 4em;
+    text-align: center;
+    color:white;
+    font-family: 'Raleway', sans-serif;
+}
+.loginCard{
+    background-color: transparent;
+    box-shadow: none !important;    
+}
+.subHeader{
+    text-align: center;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+.inputClass{
+    border: 1px solid white;
+    border-radius: 30px !important;
+    text-align: center;
+    color: white;
+    font-size: 1em;        
+    margin: 5px;    
+}
+.btnfb{
+    background: #3B5998;    
+}
+.separator{
+    font-size: 2em;
+    color: white;
+}
+.text-input::-moz-placeholder {
+    color: white;
+    text-align: center;
+  }  
+  .text-input:-ms-input-placeholder {
+    color: white;
+    text-align: center;        
+  }  
+  .text-input::-webkit-input-placeholder {
+    text-indent: 0;
+    text-align: center;
+    color: white;
+  }
+}

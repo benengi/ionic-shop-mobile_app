@@ -1,0 +1,63 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Booking Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-grid>
+        <ion-row>
+          <ion-card>
+            <ion-card-content justify-content-center align-items-center>
+              <h1>{{booking.shopName}}</h1>
+              <!-- <p>Please fill the below fields to make the reservation!</p> -->
+            </ion-card-content>
+          </ion-card>
+        </ion-row>
+    
+        <ion-row>
+          <ion-card>
+            <ion-card-content>
+              <ion-item>
+                <ion-label fixed>Full name</ion-label>
+                <ion-input type="text" [(ngModel)]="booking.fullname"></ion-input>
+              </ion-item>
+    
+              <ion-item>
+                <ion-label fixed>Mobile</ion-label>
+                <ion-input type="text" [(ngModel)]="booking.phone"></ion-input>
+              </ion-item>
+    
+              <ion-item>
+                <ion-label fixed>Email</ion-label>
+                <ion-input type="email" [(ngModel)]="booking.email"></ion-input>
+              </ion-item>
+    
+              <ion-item>
+                <ion-label fixed># Tables</ion-label>
+                <ion-input type="number" [(ngModel)]="booking.tables"></ion-input>
+              </ion-item>
+    
+              <ion-item>
+                <ion-label fixed>Price</ion-label>
+                <ion-input type="text" readonly="false" [(ngModel)]="booking.price"></ion-input>
+              </ion-item>
+    
+              <ion-item>
+                  <ion-label fixed>Comment</ion-label>
+                  <ion-textarea placeholder="Any special request.." 
+                  autocorrect="on" [(ngModel)]="booking.comment"></ion-textarea>
+              </ion-item>
+    
+              <button ion-button color="danger" (tap)="cancle(booking)" block outline>Cancel Booking</button>
+            </ion-card-content>
+          </ion-card>
+        </ion-row>
+      </ion-grid>
+
+</ion-content>

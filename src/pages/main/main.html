@@ -1,0 +1,55 @@
+<ion-content>
+    <div class="header">
+        <img src="assets/imgs/logo.png" alt="" class="titleStyle">
+       
+
+        <ion-grid>
+            <ion-row justify-content-center align-items-center>
+                <ion-card>
+                    <ion-card-content>
+                        <ion-item>
+                            <ion-label>
+                                <ion-icon name="pin" color="primary"></ion-icon> City : </ion-label>
+                            <ion-select [(ngModel)]="gaming" interface="popover">
+                                <ion-option value="kandy">KANDY</ion-option>
+                                <ion-option value="colombo">COLOMBO</ion-option>
+                                <ion-option value="malabe">MALABE</ion-option>
+                                
+                            </ion-select>
+                        </ion-item>
+                    </ion-card-content>
+                </ion-card>
+            </ion-row>
+            <ion-row>
+                    <ion-searchbar></ion-searchbar>
+            </ion-row>
+        </ion-grid>
+       
+    </div>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col col-6>
+                <button ion-button block color="dark" outline (tap)="getResturents()">Resturents</button>
+            </ion-col>
+            <ion-col col-6>
+                <button ion-button block color="dark" outline (tap)="getHotels()">Hotels</button>
+            </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+            <ion-col col-6>
+                <button ion-button block color="dark" outline>Book shops</button>
+            </ion-col>
+            <ion-col col-6>
+                <button ion-button block color="dark" outline>Super market</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <div #map id="map"></div>
+</ion-content>
+
+
+<!-- (ionInput)="getItems($event)" -->

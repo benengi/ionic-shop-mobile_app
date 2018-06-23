@@ -1,0 +1,56 @@
+<!--
+  Generated template for the NewplacePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add new place</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Shop name" [(ngModel)]="shop.shopName"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="text" placeholder="Shop description" [(ngModel)]="shop.shopDescription"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Shop Address" [(ngModel)]="shop.shopDisplayAddress"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Shop Main city" [(ngModel)]="shop.shopMainCity"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Shop Latitude" [(ngModel)]="shop.shopLat"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Shop Longitude" [(ngModel)]="shop.shopLng"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Shop image URL" [(ngModel)]="shop.shopImage1"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="number" placeholder="Rating" [(ngModel)]="shop.rating"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+
+  <button ion-button full round (tap)="addTothedb()">Add</button>
+
+</ion-content>
